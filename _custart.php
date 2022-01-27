@@ -44,10 +44,12 @@ if (!file_exists($classFile)) {
 	exit;
 }
 
+
 // class autoload
-function __autoload($className) {
+function bootAutoload($className) {
     require_once $GLOBALS["libDir"] . DS . $className . ".php";
 }
+spl_autoload_register('bootAutoLoad');
 
 CuStart::setDeployDir($deployDir);
 CuStart::setLibDir($libDir);
