@@ -31,7 +31,7 @@ if (in_array("dev", $argv)) {
 	// CuStart取得
 	$tmpDir = sys_get_temp_dir() . DS . 'custart';
 	exec("rm -rf {$tmpDir}");
-	$repo = "git@lab.e-catchup.jp:catchup/custart.git";
+	$repo = "git@github.com:ecatchup/CuStart.git";
 	exec ("git clone {$repo} {$tmpDir}");
 
 	$deployDir = dirname(__FILE__);
